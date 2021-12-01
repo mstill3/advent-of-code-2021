@@ -1,20 +1,16 @@
 #!/usr/bin/swift
 
-func day1part1(input: [Int]) -> Int{
-    print(input)
+func countLargerThanPrevious(nums: [Int]) -> Int{
     var bigger = 0
-    for (index, item) in input.enumerated() {
-        if index > 0 && item > input[index-1] {
+    for (index, num) in nums.enumerated() {
+        if index > 0 && num > nums[index-1] {
             bigger += 1
         }
     }
     return bigger
 }
 
-
-
-
-let sampleInputDay1Part1 = [
+let sampleInput = [
     199,
     200,
     208,
@@ -27,5 +23,5 @@ let sampleInputDay1Part1 = [
     263
 ]
 
-let answer = day1part1(input: sampleInputDay1Part1)
+let answer = countLargerThanPrevious(nums: sampleInput)
 print(answer)
