@@ -1,1 +1,1 @@
-print("Hello, world!")
+Command.Main.main()

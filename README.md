@@ -6,4 +6,7 @@ Written in Swift by Matt Stillwell
 ```
 swift build
 swift run
+
+./.build/debug/advent-of-code-2021 day1part1
+./.build/debug/advent-of-code-2021 day1part2
 ```

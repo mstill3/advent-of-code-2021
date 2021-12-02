@@ -6,11 +6,12 @@ extension Command {
   struct Main: ParsableCommand {
     static var configuration: CommandConfiguration {
       .init(
-        commandName: "Calc",
-        abstract: "A program to perform simple computations",
+        commandName: "advent-of-code-2021",
+        abstract: "A cli program to run advent of code 2021 algorithms",
         version: "0.0.1",
         subcommands: [
-          Command.Add.self
+          Command.Day1Part1.self,
+          Command.Day1Part2.self,
         ]
       )
     }
