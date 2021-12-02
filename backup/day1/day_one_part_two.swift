@@ -1,4 +1,6 @@
 #!/usr/bin/swift
+import ArgumentParser
+
 
 func countGroups3LargerThanPrevious(nums: [Int]) -> Int{
     var numLarger = 0
@@ -28,18 +30,10 @@ func sumNext3(nums: [Int], index: Int) -> Int {
     return nums[index] + nums[index + 1] + nums[index + 2]
 }
 
-let sampleInput = [
-    199,
-    200,
-    208,
-    210,
-    200,
-    207,
-    240,
-    269,
-    260,
-    263
-]
 
-let answer = countGroups3LargerThanPrevious(nums: sampleInput)
-print(answer)
+@main
+func main() {
+    let input = [];  //read and parse input
+    let answer = countGroups3LargerThanPrevious(nums: sampleInput)
+    print(answer)
+}
