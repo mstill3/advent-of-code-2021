@@ -28,18 +28,20 @@ func sumNext3(nums: [Int], index: Int) -> Int {
     return nums[index] + nums[index + 1] + nums[index + 2]
 }
 
-let sampleInput = [
-    199,
-    200,
-    208,
-    210,
-    200,
-    207,
-    240,
-    269,
-    260,
-    263
-]
+let sampleInput = [199,200,208,210,200,207,240,269,260,263]
 
-let answer = countGroups3LargerThanPrevious(nums: sampleInput)
-print(answer)
+func main() {
+    runTests()
+    let answer = countGroups3LargerThanPrevious(nums: sampleInput)
+    print(answer)
+}
+
+func runTests() {
+    assert(countGroups3LargerThanPrevious(nums: []) == 0)
+    assert(countGroups3LargerThanPrevious(nums: [3,2,1]) == 0)
+    assert(countGroups3LargerThanPrevious(nums: [1,2,3,4]) == 1)
+    assert(countGroups3LargerThanPrevious(nums: [199,200,208,210,200,207,240,269,260,263]) == 5)
+}
+
+
+main()

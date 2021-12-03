@@ -10,18 +10,20 @@ func countLargerThanPrevious(nums: [Int]) -> Int{
     return bigger
 }
 
-let sampleInput = [
-    199,
-    200,
-    208,
-    210,
-    200,
-    207,
-    240,
-    269,
-    260,
-    263
-]
+let sampleInput = [199,200,208,210,200,207,240,269,260,263]
 
-let answer = countLargerThanPrevious(nums: sampleInput)
-print(answer)
+func main() {
+    runTests()
+    let answer = countLargerThanPrevious(nums: sampleInput)
+    print(answer)
+}
+
+func runTests() {
+    assert(countLargerThanPrevious(nums: []) == 0)
+    assert(countLargerThanPrevious(nums: [3,2,1]) == 0)
+    assert(countLargerThanPrevious(nums: [1,2,3]) == 2)
+    assert(countLargerThanPrevious(nums: [199,200,208,210,200,207,240,269,260,263]) == 7)
+}
+
+
+main()
